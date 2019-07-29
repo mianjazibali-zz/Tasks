@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <% if (msg != '') { %>
+        <span class="button danger cursorText" style="float: right;"><%=  msg %></span>
+    <% } %>
+    <div class="form-style-5">
+        <form method="POST" action="/update">
+        <fieldset>
+            <legend></span> Update Info</legend>
+            <input type="text" name="id" value="<%= user.id %>" hidden>
+            <input type="text" id="firstname" name="firstname" placeholder="First Name *" value="<%= user.FirstName %>">
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name *" value="<%= user.LastName %>">
+            <input type="date" id="dateofbirth" name="dateofbirth" placeholder="Birthday *" value="<%= user.DateOfBirth %>">
+            <textarea id="profileimage" name="profileimage" placeholder="Profile Image Url" ><%= user.ProfileImageUrl %></textarea>    
+            <input type="text" id="address" name="address" placeholder="Address *" value="<%= user.Address %>">
+            <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code *" value="<%= user.ZipCode %>">
+        </fieldset>
+        <input type="submit" value="Update" />
+        </form>
+    </div>
+</body>
+</html>
