@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <% if (msg != '') { %>
+        <span class="button secondary cursorText" style="float: right;"><%=  msg %></span>
+    <% } %>
+    <div class="form-style-5">
+        <form method="POST" action="/create">
+        <fieldset>
+            <legend></span> User Info</legend>
+            <input type="text" id="firstname" name="firstname" placeholder="First Name *"> 
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name *">
+            <input type="date" id="dateofbirth" name="dateofbirth" placeholder="Birthday *">
+            <textarea id="profileimage" name="profileimage" placeholder="Profile Image Url"></textarea>    
+            <input type="text" id="address" name="address" placeholder="Address *">
+            <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code *">
+        </fieldset>
+        <input type="submit" value="Add User" />
+        </form>
+    </div>
+</body>
+</html>
